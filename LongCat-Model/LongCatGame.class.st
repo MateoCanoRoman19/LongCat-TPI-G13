@@ -11,6 +11,16 @@ Class {
 	#package : 'LongCat-Model'
 }
 
+{ #category : 'Run' }
+LongCatGame class >> run [
+    | juego |
+    juego := LongCatGame new.
+    Transcript show: 'Cabeza inicial: ', juego cat head printString; cr.
+    Transcript show: 'Comida en: ', juego food printString; cr.
+    juego moveRight.
+    Transcript show: 'Nueva cabeza tras mover derecha: ', juego cat head printString; cr
+]
+
 { #category : 'accessing' }
 LongCatGame >> cat [
 	^ cat
